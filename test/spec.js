@@ -18,14 +18,29 @@ contract MyContractFactory {
   }
 }`
 
+const ctorSrc = fs.readFileSync(path.join(__dirname, 'test-no-ctor.sol'), 'utf-8')
+const ctorExpectedOutput = `pragma solidity ^0.4.4;
+
+import './MyContract.sol';
+
+contract MyContractFactory {
+  function create() public returns(address) {
+    return address(new MyContract());
+  }
+}`
+
 describe('generate-contract-factory', () => {
 
   it('should generate a factory', () => {
     generateFactory(src).should.equal(expectedOutput)
   })
 
+  it('should generate a factory when there is no constructor', () => {
+    generateFactory(src).should.equal(expectedOutput)
+  })
+
   it('should read files from stdin', () => {
-    return spawn('node', ['bin.js'], src).should.eventually.equal(expectedOutput + '\n')
+    return spawn('node', ['bin.js'], ctorSrc).should.eventually.equal(ctorExpectedOutput + '\n')
   })
 
 })

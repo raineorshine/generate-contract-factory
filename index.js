@@ -11,13 +11,14 @@ module.exports = (src, options = {}) => {
   const contract = ast.body.find(statement => statement.type === 'ContractStatement')
 
   // extract constructor params
-  const constructor = contract.body.find(statement => statement.name === contract.name)
-  const params = constructor.params
+  const constructor = contract.body ? contract.body.find(statement => statement.name === contract.name) : null
+
+  const params = constructor ? constructor.params
     .map(param => src.slice(param.start, param.end))
-    .join(', ')
-  const args = constructor.params
+    .join(', ') : ''
+  const args = constructor ? constructor.params
     .map(param => param.id)
-    .join(', ')
+    .join(', ') : ''
 
   return `${pragmaSrc}
 import './${contract.name}.sol';
