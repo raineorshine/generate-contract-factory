@@ -1,0 +1,38 @@
+{
+  "name": "generate-contract-factory",
+  "version": "0.1.0",
+  "description": "Generates a factory solidity contract that instantiates a contract and returns its address.",
+  "license": "ISC",
+  "repository": "https://github.com/raineorshine/generate-contract-factory",
+  "author": {
+    "name": "Raine Revere",
+    "email": "raineorshine@gmail.com",
+    "url": "https://github.com/raineorshine"
+  },
+  "bin": {
+    "generate-contract-factory": "bin.js"
+  },
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "ethereum",
+    "solidity",
+    "contract",
+    "factory"
+  ],
+  "devDependencies": {
+    "chai": "*",
+    "chai-as-promised": "^6.0.0",
+    "mocha": "*",
+    "spawn-please": "^0.2.0"
+  },
+  "dependencies": {
+    "chai-as-promised": "^6.0.0",
+    "get-stdin-promise": "^0.1.1",
+    "solidity-parser": "^0.1.1"
+  }
+}
