@@ -31,7 +31,7 @@ camelcase@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-3.0.0.tgz#32fc4b9fcdaf845fcdf7e73bb97cac2261f0ab0a"
 
-chai-as-promised:
+chai-as-promised@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/chai-as-promised/-/chai-as-promised-6.0.0.tgz#1a02a433a6f24dafac63b9c96fa1684db1aa8da6"
   dependencies:
@@ -128,7 +128,7 @@ get-caller-file@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-1.0.2.tgz#f702e63127e7e231c160a80c1554acb70d5047e5"
 
-get-stdin-promise:
+get-stdin-promise@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/get-stdin-promise/-/get-stdin-promise-0.1.1.tgz#8ba746bdb20a18449cca6528e6862ac7211c0e3f"
   dependencies:
@@ -462,9 +462,9 @@ sigmund@~1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/sigmund/-/sigmund-1.0.1.tgz#3ff21f198cad2175f9f3b781853fd94d0d19b590"
 
-solidity-parser@^0.1.1:
+"solidity-parser@git://github.com/raineorshine/solidity-parser.git#326da052567245c9d9a0ba941bd9923aa89cda84":
   version "0.1.1"
-  resolved "https://registry.yarnpkg.com/solidity-parser/-/solidity-parser-0.1.1.tgz#0fb3b665ed7041bef4575962ee426e7cd9d0a90a"
+  resolved "git://github.com/raineorshine/solidity-parser.git#326da052567245c9d9a0ba941bd9923aa89cda84"
   dependencies:
     mocha "^2.4.5"
     pegjs "^0.9.0"
