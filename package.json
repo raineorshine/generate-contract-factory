@@ -1,6 +1,6 @@
 {
   "name": "generate-contract-factory",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Generates a factory solidity contract that instantiates a contract and returns its address.",
   "license": "ISC",
   "repository": "https://github.com/raineorshine/generate-contract-factory",
