@@ -8,7 +8,7 @@ module.exports = (src, options = {}) => {
     ast = SolidityParser.parse(src)
   }
   catch(e) {
-    console.log('Error parsing contract', e)
+    console.error('Error parsing contract', e)
     process.exit(1)
   }
 
